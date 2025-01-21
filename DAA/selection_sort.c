@@ -50,3 +50,40 @@ int main() {
 
     return 0;
 }
+
+/*
+Algorithm: Selection Sort
+
+1. Start with the first element as the minimum.
+2. Compare this minimum with the second element.
+3. If the second element is smaller than the minimum, assign the second element as the new minimum.
+4. Continue this process for all elements in the array.
+5. After finding the minimum element in the array, swap it with the first element.
+6. Move to the next element and repeat the process until the entire array is sorted.
+
+Pseudocode:
+
+function selection_sort(arr, n):
+    exchanges = 0
+    comparisons = 0
+    outer_iterations = 0
+    inner_iterations = 0
+
+    for i from 0 to n-1:
+        outer_iterations = outer_iterations + 1
+        min_idx = i
+        for j from i+1 to n:
+            inner_iterations = inner_iterations + 1
+            comparisons = comparisons + 1
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        if min_idx != i:
+            swap arr[min_idx] and arr[i]
+            exchanges = exchanges + 1
+
+    print "Sorted array: ", arr
+    print "Number of exchange operations: ", exchanges
+    print "Number of comparison operations: ", comparisons
+    print "Number of iterations of the outer loop: ", outer_iterations
+    print "Number of iterations of the inner loop: ", inner_iterations
+*/
